@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/index.php$
+RewriteRule ^(.+)$ /index.php?url=$1 [NC,L]
+RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png)$ [NC]
+AddDefaultCharset UTF-8
+AddType application/x-httpd-php .js
+AddHandler x-httpd-php5 .js
